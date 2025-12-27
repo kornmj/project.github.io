@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff - ลงทะเบียนผู้ป่วย</title>
+    <link rel="stylesheet" href="cardiac_style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h2>📋 ลงทะเบียนและประเมินผู้ป่วย</h2>
+                <a href="cardiac_login.html" style="text-decoration:none; color:#999;">กลับหน้าหลัก</a>
+            </div>
+
+            <div class="form-group">
+                <label>ชื่อ-นามสกุล ผู้ป่วย</label>
+                <input type="text" placeholder="ระบุชื่อผู้ป่วย">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                    <label>หัตถการ (Procedure)</label>
+                    <select>
+                        <option>PCI (สวนหัวใจ)</option>
+                        <option>CABG (บายพาส)</option>
+                        <option>Valve Surgery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>วันที่เข้ารับการรักษา</label>
+                    <input type="date">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>อาการที่พบ (Symptoms)</label>
+                <textarea rows="2" placeholder="เช่น เหนื่อยง่าย, แน่นหน้าอก"></textarea>
+            </div>
+
+
+            <div class="form-group"
+                style="background: #e6fffa; padding: 15px; border-radius: 10px; border: 1px solid #b2f5ea;">
+                <label style="color: #2c7a7b;">ผลการทดสอบสมรรถภาพ (CPAD/CPET)</label>
+                <div style="display:flex; align-items:center; gap: 10px; margin-top: 10px;">
+                    <input type="checkbox" style="width: 20px; height: 20px;">
+                    <strong>ผ่านเกณฑ์ (Passed)</strong>
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin: 5px 0 0 0;">* ระบบจะจัดเข้า Program A
+                    อัตโนมัติหากผ่านเกณฑ์</p>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+
+                <a href="cardiac_patient.html" class="btn">บันทึกข้อมูล</a>
+                <a href="cardiac_login.html" class="btn secondary">ยกเลิก</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

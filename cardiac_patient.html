@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="cardiac_style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div>
+                <h2>สวัสดี, คุณสมชาย</h2>
+                <span class="badge badge-success">Program A: Active Rehab</span>
+            </div>
+            <a href="cardiac_login.html"
+                style="color: #888; text-decoration: none; border: 1px solid #ddd; padding: 5px 10px; border-radius: 5px;">ออกจากระบบ</a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+
+
+            <div class="card">
+                <h3>❤️ บันทึกค่าสุขภาพ</h3>
+                <div class="form-group">
+                    <label>ความดันโลหิต (mmHg)</label>
+                    <input type="text" placeholder="เช่น 120/80">
+                </div>
+                <div class="form-group">
+                    <label>อัตราการเต้นหัวใจ (BPM)</label>
+                    <input type="number" placeholder="เช่น 75">
+                </div>
+                <a href="#" class="btn" style="padding: 10px;">บันทึกค่า</a>
+            </div>
+
+
+            <div class="card">
+                <h3>🏃 บันทึกออกกำลังกาย</h3>
+                <div class="form-group">
+                    <label>กิจกรรม</label>
+                    <select>
+                        <option>เดินเร็ว (Brisk Walk)</option>
+                        <option>ปั่นจักรยาน (Cycling)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>ระยะเวลา (นาที)</label>
+                    <input type="number" placeholder="30">
+                </div>
+
+                <div style="background: #f7fafc; padding: 10px; border-radius: 8px; text-align: center;">
+                    <span style="font-size: 13px; color: #718096;">ค่า METs โดยประมาณ</span>
+                    <div style="font-weight: bold; color: var(--primary); font-size: 18px;">-- METs / -- kcal</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h3>📊 สถิติการเต้นของหัวใจ (Heart Rate Trend)</h3>
+            <p style="color: #888; font-size: 0.9em; margin-bottom: 20px;">กราฟแสดงค่า HR ย้อนหลัง 7 วัน (Mockup Data)
+            </p>
+
+            <div class="css-chart">
+                <div class="chart-bar" style="height: 40%;"><span>72</span>
+                    <div class="chart-label">จ.</div>
+                </div>
+                <div class="chart-bar" style="height: 65%;"><span>85</span>
+                    <div class="chart-label">อ.</div>
+                </div>
+                <div class="chart-bar" style="height: 55%;"><span>78</span>
+                    <div class="chart-label">พ.</div>
+                </div>
+                <div class="chart-bar" style="height: 45%;"><span>74</span>
+                    <div class="chart-label">พฤ.</div>
+                </div>
+                <div class="chart-bar" style="height: 80%;"><span>92</span>
+                    <div class="chart-label">ศ.</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h3>📄 รูปภาพกราฟ EKG</h3>
+            <div
+                style="border: 2px dashed #cbd5e0; border-radius: 10px; padding: 40px; text-align: center; background: #f8fafc;">
+                <p style="color: #a0aec0; margin-bottom: 15px;">คลิกเพื่ออัพโหลดรูปภาพ</p>
+                <input type="file" style="display: inline-block; width: auto;">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
